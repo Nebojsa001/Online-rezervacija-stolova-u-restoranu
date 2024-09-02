@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online rezervacija karata</title>
+  </head>
+  <body>
+    <div class="formbold-main-wrapper">
+      <!-- Author: FormBold Team -->
+      <!-- Learn More: https://formbold.com -->
+      <div class="formbold-form-wrapper">
+        <form action="https://formbold.com/s/FORM_ID" method="POST">
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="fName" class="formbold-form-label"> Ime </label>
+                <input
+                  type="text"
+                  name="fName"
+                  id="fName"
+                  placeholder="Marko"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="lName" class="formbold-form-label"> Prezime </label>
+                <input
+                  type="text"
+                  name="lName"
+                  id="lName"
+                  placeholder="Marković"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="formbold-mb-5">
+            <label for="guest" class="formbold-form-label">
+              Unesite vaš kontakt email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="marko.markovic@gmail.com"
+              class="formbold-form-input"
+            />
+          </div>
+
+          <!-- <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="date" class="formbold-form-label"> Datum </label>
+                <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="time" class="formbold-form-label"> Vrijeme </label>
+                <input
+                  type="time"
+                  name="time"
+                  step="3600"
+                  onchange="adjustTime(this)"
+                  id="time"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+          </div> -->
+          <div class="center">
+            <button class="formbold-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function adjustTime(input) {
+        const timeValue = input.value;
+        const [hours, minutes] = timeValue.split(":");
+        if (minutes !== "00") {
+          input.value = `${hours}:00`;
+        }
+      }
+    </script>
+  </body>
+</html>

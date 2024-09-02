@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  background: url("img/restoran.webp");
+  background-size: automatic;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.restaurant-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.table {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.table:hover {
+  background-color: #45a049;
+}
+
+.info {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  display: none;
+}
+
+#table1,
+#order1 {
+  top: 330px;
+  left: 575px;
+}
+
+#table2,
+#order2 {
+  top: 480px;
+  left: 575px;
+}
+#table3,
+#order3 {
+  top: 640px;
+  left: 575px;
+}
+
+#table4,
+#order4 {
+  top: 405px;
+  left: 750px;
+}
+#table5,
+#order5 {
+  top: 570px;
+  left: 750px;
+}
+
+#table6,
+#order6 {
+  top: 460px;
+  left: 910px;
+}
+
+#table7,
+#order7 {
+  top: 460px;
+  left: 1070px;
+}
+
+#table8,
+#order8 {
+  top: 460px;
+  left: 1220px;
+}
+#table9,
+#order9 {
+  top: 595px;
+  left: 900px;
+}
+
+#table10,
+#order10 {
+  top: 595px;
+  left: 1000px;
+}
+#table11,
+#order11 {
+  top: 595px;
+  left: 1100px;
+}
+
+#table12,
+#order12 {
+  top: 595px;
+  left: 1220px;
+}
+
+.table-order {
+  background: url("img/wood-texture.webp");
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin-top: 40px;
+  color: white;
+  margin-left: -70px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.table-order span {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  padding: 5px 10px;
+}
+
+.table-order a {
+  background-color: white;
+  padding: 5px 5px;
+  margin-top: 10px;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.table-order a:hover {
+  background-color: rgb(204, 204, 204);
+}
