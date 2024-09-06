@@ -2,13 +2,6 @@
 
 Skolski projekat
 
------------------ADMIN-PANEL-----------------------
-----KONOBAR/ADMIN
-
----
-
------------------USER-PANEL------------------------
--korisnik sam rezervise svoje mjesto tako sto
-napravi acc unese svoje podatke(ime,prezime,email
-i password). zastim mu se prikaze koji svi stolovi
-postoje u restoranu i njihov status o rezervisanosti
+Prilikom pokretanja aplikacije
+Otvorimo terminal i kucate cd backend, zatim "npm i" da instaliramo neophodne module,
+nakon čega kucamo "npm start" i naš projekat je pokrenut.
