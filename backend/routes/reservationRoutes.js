@@ -7,7 +7,7 @@ router
   .route("/")
   .post(authController.protect, reservationController.createReservation)
   .get(reservationController.getAllReservations)
-  .delete(reservationController.deleteReservation);
+  .delete(authController.protect, reservationController.deleteReservation);
 
 router
   .route("/free-reservations")

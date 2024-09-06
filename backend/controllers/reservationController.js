@@ -143,10 +143,16 @@ exports.getAllReservations = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteReservation = catchAsync(async (req, res, next) => {
-  const reservation = await Reservation.findByPk(req.body.guestEmail);
+  const reservation = await Reservation.findByPk(req.body.id);
 
   if (!reservation) {
     return next(new appError("Rezervacija nije pronadjena!"), 404);
+  }
+  if (!reservation.userId === req.user.id || req.user.role != "admin") {
+    return next(
+      new appError("Nemate dozvolju za brisanje tuđe rezervacije!"),
+      403
+    );
   }
   await reservation.destroy();
 
@@ -161,16 +167,11 @@ exports.getAllFreeReservations = catchAsync(async (req, res, next) => {
   const tableId = req.query.tableId;
 
   if (!tableId) {
-    return next(new appError("Morate uneti ID stola!"), 400);
+    return next(new appError("Morate unjeti ID stola!"), 400);
   }
   if (!selectedDate) {
-    return next(new appError("Morate uneti datum!"), 400);
+    return next(new appError("Morate unjeti datum!"), 400);
   }
-
-  console.log(
-    `${selectedDate}T${process.env.POCETAK_RADNOG_VREMENA}:00:00+02:00`
-  );
-  console.log(`${selectedDate}T${process.env.KRAJ_RADNOG_VREMENA}:00:00+02:00`);
 
   const reservations = await Reservation.findAll({
     where: {
@@ -191,10 +192,10 @@ exports.getAllFreeReservations = catchAsync(async (req, res, next) => {
 
   const freeSlots = [];
   let lastEndTime = new Date(
-    `${selectedDate}T${process.env.POCETAK_RADNOG_VREMENA}:00:00.000Z`
+    `${selectedDate}T${process.env.POCETAK_RADNOG_VREMENA}:00:00+02:00`
   );
   const endOfDay = new Date(
-    `${selectedDate}T${process.env.KRAJ_RADNOG_VREMENA}:00:00.000Z`
+    `${selectedDate}T${process.env.KRAJ_RADNOG_VREMENA}:00:00+02:00`
   );
 
   reservations.forEach((reservation) => {
