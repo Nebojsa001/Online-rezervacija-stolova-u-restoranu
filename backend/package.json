@@ -1,5 +1,5 @@
 {
-  "name": "online-rezervacija-termina-rmbms",
+  "name": "online-rezervacija-stolova-u-restoranu",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nebojsa001/Online-rezervacija-termina-RMBMS.git"
+    "url": "git+https://github.com/Nebojsa001/Online-rezervacija-stolova-u-restoranu"
   },
   "author": "Nebojsa Trivunovic",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nebojsa001/Online-rezervacija-termina-RMBMS/issues"
+    "url": "https://github.com/Nebojsa001/Online-rezervacija-stolova-u-restoranu/issues"
   },
-  "homepage": "https://github.com/Nebojsa001/Online-rezervacija-termina-RMBMS#readme",
+  "homepage": "https://github.com/Nebojsa001/Online-rezervacija-stolova-u-restoranu#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
