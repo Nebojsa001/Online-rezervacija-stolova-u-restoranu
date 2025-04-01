@@ -1,7 +1,32 @@
-# Online-rezervacija-stolova-u-restoranu
+## 🚀 Pokretanje projekta
 
-Skolski projekat
+### 1️⃣ Instalacija Node.js
+Za pokretanje ovog projekta, potrebno je da imate instaliran **Node.js** verzije **20.0+**.
 
-Prilikom pokretanja aplikacije
-Otvorimo terminal i kucate cd backend, zatim "npm i" da instaliramo neophodne module,
-nakon čega kucamo "npm start" i naš projekat je pokrenut.
+🔗 Preuzmite Node.js sa zvaničnog sajta: [Node.js Download](https://nodejs.org/)
+
+### 2️⃣ Kloniranje repozitorijuma
+```bash
+ git clone https://github.com/korisnik/projekat.git
+ cd projekat
+```
+
+### 3️⃣ Instalacija zavisnosti
+```bash
+ npm install
+```
+
+### 4️⃣ Pokretanje aplikacije
+```bash
+ npm start
+```
+
+---
+## 📌 Tehnologije korišćene
+✅ Node.js 20+  
+✅ Express.js  
+✅ PostgreSQL / MongoDB (po potrebi)  
+✅ Sequelize / Mongoose  
+
+
+
