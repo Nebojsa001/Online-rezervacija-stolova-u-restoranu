@@ -25,7 +25,7 @@ Za pokretanje ovog projekta, potrebno je da imate instaliran **Node.js** verzije
 ## 📌 Tehnologije korišćene
 ✅ Node.js 20+  
 ✅ Express.js  
-✅ PostgreSQL / MongoDB (po potrebi)  
+✅ PostgreSQL
 ✅ Sequelize / Mongoose  
 
 
